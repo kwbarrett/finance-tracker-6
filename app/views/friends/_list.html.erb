@@ -16,9 +16,12 @@
             <td><%= friend.first_name %></td>
             <td><%= friend.last_name %></td>
             <td>
-              <%= link_to 'Remove', '#',  method: :delete, 
+              <%= link_to 'View Profile', user_path(friend), 
+                                          class: 'btn btn-success btn-sm' %>
+              <%= link_to 'Stop following', friendship_path(friend),  method: :delete, 
                                           data: {confirm: 'Are you sure?'}, 
                                           class: 'btn btn-warning btn-sm' %>
+
             </td>
           </tr>
         <% end %>
